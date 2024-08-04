@@ -13,8 +13,7 @@ jobs:
             echo "Hello World"
             ls
             cat README.md
-            apt update
-            apt install cowsay
+            sudo apt-get install cowsay -y
         
         - name: generate ascii artwork
           run: cowsay -f dragon "run for cover" >> dragon.txt
