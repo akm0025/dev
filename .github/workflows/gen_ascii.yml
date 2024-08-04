@@ -17,3 +17,5 @@ jobs:
         
         - name: generate ascii artwork
           run: cowsay -f dragon "run for cover" >> dragon.txt
+        - name: read file
+          run: cat dragon.txt
