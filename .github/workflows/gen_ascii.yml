@@ -11,4 +11,4 @@ jobs:
         - name: list files
           run: ls -ltra
         - name: execute gen_ascii shell script
-          run: ./gen_ascii.sh
+          run: ./gen_ascii.sh 
