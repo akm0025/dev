@@ -1,4 +1,4 @@
-name: generate ascii artwork
+name: generate ascii artwork through shell script
 
 on: push
 
@@ -8,14 +8,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
           name: clone repo
-        - name: lsit and read files
-          run: |
-            echo "Hello World"
-            ls
-            cat README.md
-            sudo apt-get install cowsay -y
-        
-        - name: generate ascii artwork
-          run: cowsay -f dragon "run for cover" >> dragon.txt
-        - name: read file
-          run: cat dragon.txt
+        - name: list files
+          run: ls -ltra
+        - name: execute gen_ascii shell script
+          run: ./gen_ascii.sh
