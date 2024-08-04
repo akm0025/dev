@@ -1,0 +1,20 @@
+name: first wf
+
+on: push
+
+jobs:
+    first_jb:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+          name: clone repo
+        - name: lsit and read files
+          run: |
+            echo "Hello World"
+            ls
+            cat README.md
+            apt update
+            apt install cowsay
+        
+        - name: generate ascii artwork
+          run: cowsay -f dragon "run for cover" >> dragon.txt
