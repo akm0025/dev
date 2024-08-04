@@ -1,0 +1,16 @@
+name: first wf
+
+on: push
+
+jobs:
+    first_jb:
+        runs-on: ubuntu-latest
+        steps:
+        - name: print welcome message
+          run: echo "Hello World"
+          
+        - name: list files
+          run: ls
+        
+        - name: read file
+          run: cat README.md
