@@ -8,11 +8,16 @@ jobs:
         steps:
         - uses: actions/checkout@v4
           name: clone repo
-        - name: print welcome message
-          run: echo "Hello World"
-          
-        - name: list files
-          run: ls
+        - name: lsit and read files
+          run: |
+            echo "Hello World"
+            ls
+            cat README.md
         
-        - name: read file
-          run: cat ./README.md 
+        - name: generate ascii artwork
+          run: cowsay -f dragon "run for cover" >> dragon.txt
+        # - name: list files
+        #   run: ls
+        
+        # - name: read file
+        #   run: cat README.md 
