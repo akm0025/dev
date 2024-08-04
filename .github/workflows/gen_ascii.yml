@@ -1,4 +1,4 @@
-name: first wf
+name: generate ascii artwork
 
 on: push
 
